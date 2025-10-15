@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Hedwige Mail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <img src="https://cdn-icons-png.flaticon.com/512/906/906361.png" alt="owl" class="logo"/>
+      <h1>Hedwige Mail</h1>
+    </div>
+    <div class="actions">
+      <div id="me"></div>
+      <button id="connectBtn">Login with Google</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <button id="composeBtn">+ Compose</button>
+      <ul id="inbox"></ul>
+    </aside>
+
+    <section class="content">
+      <div class="toolbar">
+        <input id="query" placeholder="Search mail (e.g., from:prof)"/>
+        <button id="refresh">🔄</button>
+      </div>
+      <div class="mail-view" id="message">Select an email to read</div>
+    </section>
+
+    <section class="composer" id="composer">
+      <h2>New Message</h2>
+      <form id="sendForm">
+        <input name="to" placeholder="To" required/>
+        <input name="subject" placeholder="Subject" required/>
+        <textarea name="body" placeholder="Write your message..." rows="10" required></textarea>
+        <button type="submit">Send ✉️</button>
+        <span id="sendStatus"></span>
+      </form>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
